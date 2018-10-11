@@ -31,3 +31,6 @@ You will need to install the following dependencies:
 ## Contributing
 Are you a programmer, engineer, first-time-contributor or hobbyist who has a great idea for a new feature in Ngram Analytica? Maybe you have a good idea for a bug fix? Feel free to grab the code and tinker with it. Don't forget to smash those Star & Pull Request buttons.
 [Contributor List](https://github.com/jonathanrjpereira/Ngram-Analytica/graphs/contributors)
+
+## Note
+We are not affiliated with Google Ngram. This repository was created as a proof of concept & is not meant for large-scale use. Web-Scraping is a temporary solution to gathering such data. Please be mindful & limit the number of requests made to the website using such a method. If your requirement involves performing a large scale analysis on the underlying data, you might prefer to download a portion of the corpora yourself. Or all of it, if you have the bandwidth and space. You can find more information & datasets [Here.](http://storage.googleapis.com/books/ngrams/books/datasetsv2.html)  
