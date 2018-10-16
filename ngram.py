@@ -14,7 +14,7 @@ def graph(content, start, end, smoothing):
                    "corpus":"15",
                    "smoothing":smoothing}
 
-    page = requests.request("GET", url, params=querystring)
+    page = requests.get(url, params=querystring)
     
     soup = BeautifulSoup(page.content, 'html.parser')
 
@@ -28,13 +28,12 @@ def graph(content, start, end, smoothing):
         found = re.search('"timeseries": (.+?)], "pare', graph).group(1)    #Start & End of graph data
     except AttributeError:
         print("Encountered an error! Here's the response from the page\n Response: {}".format(page.content)) # apply your error handling
-        sys.exit() # Exit gracefully
+        sys.exit(1) # Exit gracefully
 
-    datapoints = found.split (', ')   #Convert graph's data points into list
-    datapoints = [datapoint.replace('[', '') for datapoint in datapoints]   #Removes any garbage values from data.
-
-
-    datapoints = [float(datapoint) for datapoint in datapoints]
+    # Convert graph's data points into list and
+    # remove any garbage values from data
+    tokens = found.replace('[', '').split(', ')
+    datapoints = [float(datapoint) for datapoint in tokens]
     #list = [float(s)*10000000 for s in list]    #Coverts data points from floating exponential values to float
     # 10,000,000 is used such that numbers with value 10e-5 are less than 1
 
@@ -51,5 +50,4 @@ def ngram_viewer(content, start, end, smoothing):
     plt.show()
 
 if __name__ == '__main__':
-    content = "Farrago"
-    ngram_viewer(content, 1800, 2009, smoothing=3)
+    ngram_viewer("Farrago", 1800, 2009, smoothing=3)
