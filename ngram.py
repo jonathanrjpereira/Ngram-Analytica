@@ -15,7 +15,7 @@ def graph(content, start, end, smoothing):
                    "smoothing":smoothing}
 
     page = requests.get(url, params=querystring)
-    
+
     soup = BeautifulSoup(page.content, 'html.parser')
 
     data = []
