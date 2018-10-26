@@ -27,6 +27,8 @@ You will need to install the following dependencies:
  2. Web Scraping Library: [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
  3. Graph Plotting Library: [Matplotlib 3.0](https://matplotlib.org/)
 
+ Install every dependency with `pip install -r requirements.txt`
+
 
 ## Contributing
 Are you a programmer, engineer, first-time-contributor or hobbyist who has a great idea for a new feature in Ngram Analytica? Maybe you have a good idea for a bug fix? Feel free to grab the code and tinker with it. Don't forget to smash those Star & Pull Request buttons.
