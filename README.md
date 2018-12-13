@@ -1,4 +1,4 @@
-# Ngram Analytica
+![Banner](https://github.com/jonathanrjpereira/Ngram-Analytica/blob/master/img/Banner-01.svg)
 Web-Scrapes &amp; Re-Plots the Google Ngram Viewer Graph for any N-gram in Python.
 The Google Books Ngram Viewer is an online search engine that charts the frequencies of any set of comma-delimited search strings using a yearly count of n-grams found in sources printed between 1500 and 2008 in Google's text corpora in English.
 
